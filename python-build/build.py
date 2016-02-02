@@ -149,11 +149,11 @@ def strip(path):
     ndkpath = os.environ["NDK_PATH"]
     toolchain = os.path.join(
         ndkpath, "toolchains/arm-linux-androideabi-4.9/prebuilt/"
-                 "linux-x86_64/arm-linux-androideabi")
+                 "linux-x86/arm-linux-androideabi")
     if cfg.plat == "_x86":
         toolchain = os.path.join(
             ndkpath, "toolchains/x86-4.9/prebuilt/"
-                     "linux-x86_64/i686-linux-android")
+                     "linux-x86/i686-linux-android")
     run('%s/bin/strip %s' % (toolchain, path))
 
 
